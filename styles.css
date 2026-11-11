@@ -1,0 +1,88 @@
+/* Custom Styles for Recorriendo por el Cauca */
+
+/* Animación suave para botones y elementos */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estado activo de las opciones seleccionables */
+.option-btn {
+  background-color: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(51, 65, 85, 1);
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: rgba(51, 65, 85, 0.9);
+  border-color: #10b981;
+}
+
+.option-btn.correct {
+  background-color: rgba(6, 78, 59, 0.7) !important;
+  border-color: #10b981 !important;
+  color: #a7f3d0 !important;
+}
+
+.option-btn.wrong {
+  background-color: rgba(127, 29, 29, 0.7) !important;
+  border-color: #ef4444 !important;
+  color: #fecaca !important;
+}
+
+/* Estilo para los nodos del stepper de progreso */
+.step-node {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.step-node.completed {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.step-node.current {
+  background-color: #0284c7;
+  color: #ffffff;
+  outline: 3px solid rgba(2, 132, 199, 0.4);
+}
+
+.step-node.upcoming {
+  background-color: #334155;
+  color: #94a3b8;
+}
+
+/* Efecto para insignias bloqueadas vs desbloqueadas */
+.badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+  background-color: rgba(15, 23, 42, 0.6);
+  opacity: 0.4;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.badge-card.unlocked {
+  opacity: 1;
+  filter: grayscale(0%);
+  border-color: #10b981;
+  background-color: rgba(6, 78, 59, 0.2);
+}
